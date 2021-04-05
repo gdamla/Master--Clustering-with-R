@@ -1,8 +1,8 @@
 # CUSTOMER TRANSACTION DATA / CLUSTERING
-# G¸lhan Damla A˛˝k - 2000136
+# G√ºlhan Damla A≈üƒ±k
 
 getwd()
-setwd("C:/Users/user/Desktop/BAU Lessons/2- Marketing Analysis/Hands On Exercises/2- Adult Income Dataset R_glm")
+setwd("C:/Users/user/.../2- Adult Income Dataset R_glm")
 
 library(dplyr)
 library(ggplot2)
@@ -63,7 +63,7 @@ CustTransactionsNew %>%
        title=" - Histograms") +
   theme_bw()
 
-############# ìelbow criterionî  METHOD 1
+############# ‚Äúelbow criterion‚Äù  METHOD 1
 wssplot <- function(CustTransactionsNew, nc=15, seed=1234)
 {
   wss <- (nrow(CustTransactionsNew)-1)*sum(apply(CustTransactionsNew,2,var))
@@ -78,7 +78,7 @@ wssplot <- function(CustTransactionsNew, nc=15, seed=1234)
 wssplot(CustTransactionsNew, nc=15)
 # Looks like after 4th cluster, marginal gain drops.
 
-############# ìelbow criterionî  METHOD 2
+############# ‚Äúelbow criterion‚Äù  METHOD 2
 set.seed(109)
 wss <- 0
 for (i in 1:30) {
